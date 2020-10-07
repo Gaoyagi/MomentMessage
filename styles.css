@@ -33,6 +33,7 @@ body {
 }
 
 input[type=text] {
+    text-align: center;
     border: none;
     font-size: 40px;
     background-color: white;
