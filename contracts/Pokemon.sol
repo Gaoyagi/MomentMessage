@@ -1,5 +1,8 @@
+//Pokemon =  Zombie factory
 
 pragma solidity ^0.7.0;
+
+import "./ERC721.sol"
 
 contract Pokemon{
 
