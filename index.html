@@ -162,14 +162,25 @@
 
 
       let message = $('#new_message').val();
-      web3.eth.sendTransaction({
-        from: web3.eth.getAccounts(),
-        to: contract_address,
-        gasPrice:web3.toWei(4.1, 'Gwei'), 
-        data: message // deploying a contracrt
-        }, function(error, hash){
-            console.log(error);
+      ethereum.enable()
+      contract.setMessage.sendTransaction(message,{
+            from: ethereum.selectedAddress,
+         },function(error , result){
+             if(!error)
+                 console.log(result);
+             else
+                 console.log(error.code)
         });
+
+      //contract.setMessage.sendTransaction("Greetings Blockchain", {from: contract_address});
+    //   web3.eth.sendTransaction({
+    //     from: web3.eth.getAccounts(),
+    //     to: contract_address,
+    //     gasPrice:web3.toWei(4.1, 'Gwei'), 
+    //     data: message // deploying a contracrt
+    //     }, function(error, hash){
+    //         console.log(error);
+    //     });
     }
   </script>
 </head>
