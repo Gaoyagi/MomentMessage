@@ -16,6 +16,4 @@ contract Wild {
     uint256 battleCount;
     mapping (uint256 => string) pokemonNames;
 
-    
-    
 }
