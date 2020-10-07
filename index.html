@@ -1,5 +1,6 @@
 <html>
 <head>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script>
     const contract_address = "0xADDd8A60cDD1D5Ec47d6cAB359841c43eC547eFe";
@@ -185,10 +186,17 @@
   </script>
 </head>
     <body>
-    <div id="message"></div>
+    <div class="content">
 
-    <br>
-    New Message: <input type="text" id="new_message" />
-    <button onclick="setMessage()">Set Message</button>
+        <div id="message"></div>
+
+        <div class="form">
+            <input type="text" id="new_message" />
+        </div>
+        <div class="but">
+            <button onclick="setMessage()">Set Message</button>
+        </div>
+    </div>
+    </div>
     </body>
 </html>

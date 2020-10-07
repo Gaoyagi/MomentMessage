@@ -1,0 +1,64 @@
+.content {
+    min-height: 100vh; 
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: 100%;
+  grid-template-rows: 10% 2% 10%;
+}
+
+body {
+    background: linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+}
+
+#message {
+    display: flex;
+    color: white;
+    
+    font-size: 60px;
+    justify-content:  center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text] {
+    border: none;
+    font-size: 40px;
+    background-color: white;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+::-webkit-outer-spin-button:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
