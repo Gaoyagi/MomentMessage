@@ -1,8 +1,8 @@
 //Pokemon =  Zombie factory
 
-pragma solidity ^0.7.0;
+pragma solidity >=0.4.22 <0.8.0;
 
-import "./ERC721.sol"
+import "./ERC721.sol";
 
 contract Pokemon{
 
@@ -10,8 +10,6 @@ contract Pokemon{
 
 
 
-
-// # @version >=0.2.4 <0.3.0
 
 // struct Pokemon:
 //     name: String[32]
