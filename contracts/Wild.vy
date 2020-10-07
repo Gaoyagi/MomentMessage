@@ -1,6 +1,5 @@
 # @version >=0.2.4 <0.3.0
 
-# Representation of a poke on
 struct Pokemon:
     name: String[32]
     dna: uint256
@@ -8,15 +7,13 @@ struct Pokemon:
     matches: uint256
     wins: uint256
 
-# hash and constants    
-DNA_DIGITS: constant(uint256) = 16
+DNA_DIGITS: constant(uint256) = 16              
 DNA_MODULUS: constant(uint256) = 10 ** DNA_DIGITS
-HP_LIMIT: constant(uint256) = 1000 
+HP_LIMIT: constant(uint256) = 1000
 NAME_MODULUS: constant(uint256) = 20
-
 battleCount: uint256
-pokemonNames: HashMap[uint256, String[32]]
-# list of pokemons
+pokemonName: Hashmap[uint256, String[32]]
+
 @internal
 def __init__():
     self.pokemonNames[0] = "Bulbasaur"
@@ -40,12 +37,10 @@ def __init__():
     self.pokemonNames[18] = "Scyther"
     self.pokemonNames[19] = "Mewtwo"
 
-# build hash
 @internal
 def _generateRandomDNA() -> uint256:
     random: uint256 = convert(keccak256(convert(self.battleCount, bytes32)), uint256)
     return random % DNA_MODULUS
-
 
 @external
 def battle(pokemon: Pokemon) -> (bool, String[32], uint256, uint256):
@@ -54,7 +49,6 @@ def battle(pokemon: Pokemon) -> (bool, String[32], uint256, uint256):
     randomHP: uint256 = randomDNA % HP_LIMIT
 
     self.battleCount += 1
-
     if(pokemon.HP > randomHP):
         return True, randomName, randomDNA, randomHP
     else:
